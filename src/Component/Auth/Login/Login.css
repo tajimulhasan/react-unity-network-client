@@ -1,0 +1,25 @@
+.google img{
+    width: 40px;
+}
+.line{
+    width: 140px;
+    height: 1px;
+    background-color: rgb(173, 173, 173);
+    margin: 0px 9px;
+}
+.pa p{
+    color: rgb(175, 175, 175);
+}
+.social{
+    cursor: pointer;
+    width: 250px;
+    padding: 4px;
+    box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
+    margin: 0px auto;
+    background-color: #fff6f1;
+    border-radius: 8px;
+    -webkit-border-radius: 8px;
+    -moz-border-radius: 8px;
+    -ms-border-radius: 8px;
+    -o-border-radius: 8px;
+}

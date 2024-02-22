@@ -1,0 +1,14 @@
+.regievent-container{
+    display: flex;
+    justify-content: space-around;
+}
+.sidemenu{
+    width: 186px;
+}
+.logohere img{
+    width: 108px;
+}
+.component{
+    background-color: rgb(247, 253, 255);
+    width: 60%;
+}

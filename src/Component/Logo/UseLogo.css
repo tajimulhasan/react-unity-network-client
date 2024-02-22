@@ -1,0 +1,7 @@
+.uselogo img{
+width: 10%;
+}
+.uselogo{
+    display: flex;
+    justify-content: center;
+}
