@@ -1,8 +1,8 @@
 import React, { useState } from "react";
 import "./Login.css";
-import { Link, useNavigate } from "react-router-dom";
+import { Link, useLocation, useNavigate } from "react-router-dom";
 import useLogo from "../../Logo/useLogo";
-import { useSignInWithEmailAndPassword } from "react-firebase-hooks/auth";
+import { useSignInWithEmailAndPassword, useSignInWithGoogle } from "react-firebase-hooks/auth";
 import auth from "../../../firebase.init";
 const Login = () => {
   const [agree, setAgree] = useState(false);
@@ -13,15 +13,21 @@ const Login = () => {
     loading,
     error,
   ] = useSignInWithEmailAndPassword(auth);
+  if(loading){
+    <p>Loading...</p>
+  }
+  const [signInWithGoogle, user1] = useSignInWithGoogle(auth);
   const navigate = useNavigate();
+  const location = useLocation();
+  const from = location.state?.from?.pathname || '/';
   const handleSubmit = e =>{
     const email = e.target.email.value;
     const password = e.target.password.value;
     e.preventDefault();
     signInWithEmailAndPassword(email, password)
   }
-  if(user){
-       navigate('/')
+  if(user || user1){
+       navigate(from, {replace: true});
   }
   return (
     <div>
@@ -78,7 +84,7 @@ const Login = () => {
           <div className="line"></div>
         </div>
       </div>
-      <div className="social">
+      <div onClick={() => signInWithGoogle()} className="social">
         <div className="wrap d-flex justify-content-evenly align-items-center">
           <div className="google">
             <img src="google.png" alt="" />

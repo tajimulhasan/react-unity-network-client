@@ -2,8 +2,9 @@ import React from 'react';
 
 const Blog = () => {
     return (
-        <div>
-            <h2>This is Blog section</h2>
+        <div className='text-center'>
+            <h2>Read essential blog</h2>
+            <a style={{backgroundColor: '#FF5B00', padding: '6px 12px', color: 'white', borderRadius: '4px'}} href="https://yaqeeninstitute.org/tag/blog" target="_blank">Read Blog here</a>
         </div>
     );
 };

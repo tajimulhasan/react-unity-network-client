@@ -1,9 +1,9 @@
 import React from 'react';
-
+import images from '../../../images/donation.png';
 const Donation = () => {
     return (
-        <div>
-            <h2>This is donation section</h2>
+        <div className='text-center'>
+             <img src={images} alt="" />
         </div>
     );
 };

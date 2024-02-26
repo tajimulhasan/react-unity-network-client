@@ -1,0 +1,7 @@
+.allEvents{
+display: grid;
+grid-template-columns: repeat(4, 1fr);
+gap: 33px;
+width: max-content;
+margin: 0px auto;
+}

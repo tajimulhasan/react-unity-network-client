@@ -2,8 +2,8 @@
     display: flex;
     justify-content: space-around;
 }
-.sidemenu{
-    width: 186px;
+.ori{
+    width: 220px;
 }
 .logohere img{
     width: 108px;
@@ -11,4 +11,5 @@
 .component{
     background-color: rgb(247, 253, 255);
     width: 60%;
+    padding: 16px;
 }

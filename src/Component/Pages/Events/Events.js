@@ -1,9 +1,9 @@
 import React from 'react';
-
+import img from '../../../images/Non-Profit-Word-Cloud.jpg';
 const Events = () => {
     return (
-        <div>
-            <h2>THis is events</h2>
+        <div className='text-center mt-5'>
+          <img  className='w-50' src={img} alt="" />
         </div>
     );
 };
