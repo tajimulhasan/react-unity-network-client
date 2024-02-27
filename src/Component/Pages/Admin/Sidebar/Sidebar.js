@@ -26,8 +26,8 @@ const Sidebar = () => {
   };
   return (
     <div>
-      <p className="text-center display-6">
-        {regiList && "Registration List"}
+      <p className="text-center" style={{fontSize: '26px'}}>
+        {regiList && "Volunteer Registration List"}
         {addEvent && "Add Event"}
       </p>
       <div className="regievent-container">
