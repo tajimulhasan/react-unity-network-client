@@ -16,7 +16,7 @@ const Login = () => {
   if(loading){
     <p>Loading...</p>
   }
-  const [signInWithGoogle, user1] = useSignInWithGoogle(auth);
+  const [signInWithGoogle] = useSignInWithGoogle(auth);
   const navigate = useNavigate();
   const location = useLocation();
   const from = location.state?.from?.pathname || '/';
@@ -26,7 +26,7 @@ const Login = () => {
     e.preventDefault();
     signInWithEmailAndPassword(email, password)
   }
-  if(user || user1){
+  if(user){
        navigate(from, {replace: true});
   }
   return (
@@ -35,35 +35,35 @@ const Login = () => {
       <Link to="/">{logo}</Link>
       </div>
       <form onSubmit={handleSubmit} className="form-container">
-        <div class="mb-3">
-          <label for="exampleInputEmail1" class="form-label">
+        <div className="mb-3">
+          <label htmlFor="exampleInputEmail1" className="form-label">
             Email address
           </label>
           <input
             type="email"
-            class="form-control"
+            className="form-control"
             id="exampleInputEmail1"
             name="email"
             aria-describedby="emailHelp"
             required
           />
         </div>
-        <div class="mb-3">
-          <label for="exampleInputPassword1" class="form-label">
+        <div className="mb-3">
+          <label htmlFor="exampleInputPassword1" className="form-label">
             Password
           </label>
           <input
             type="password"
-            class="form-control"
+            className="form-control"
             id="exampleInputPassword1"
             name="password"
             required
           />
         </div>
         <p className="text-danger">{error?.message}</p>
-        <div class="mb-3 form-check">
-          <input onClick={() => setAgree(!agree)} type="checkbox" class="form-check-input" id="exampleCheck1" />
-          <label className={agree ? 'text-success' : 'text-danger'} class="form-check-label" for="exampleCheck1">
+        <div className="mb-3 form-check">
+          <input onClick={() => setAgree(!agree)} type="checkbox" className="form-check-input" id="exampleCheck1" />
+          <label className={agree ? 'text-success' : 'text-danger'}  htmlFor="exampleCheck1">
             Check me out
           </label>
         </div>

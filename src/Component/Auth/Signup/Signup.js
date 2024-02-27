@@ -37,6 +37,7 @@ const Signup = () => {
     }
   const handleSubmit = async(event) =>{
     event.preventDefault();
+    const data = {name, email};
     if(password !== confirmPasswrd){
         setError('*Confirm password does not match')
     }
@@ -48,6 +49,20 @@ const Signup = () => {
     if(success){
       console.log('success updating');
     }
+
+    //post name and email on database
+      const url = 'http://localhost:5000/signup';
+      fetch(url, {
+        method: "POST",
+        headers: {
+          "Content-type": "application/json"
+        },
+        body: JSON.stringify(data)
+      })
+      .then(res => res.json())
+      .then(data => {
+        console.log(data)
+      })
   }
     return (
         <div>
@@ -55,59 +70,59 @@ const Signup = () => {
         <Link to="/">{logo}</Link>
         </div>
         <form onSubmit={handleSubmit} className="form-container">
-          <div class="mb-3">
-            <label for="exampleInputEmail1" class="form-label">
+          <div className="mb-3">
+            <label htmlFor="exampleInputEmail1" className="form-label">
             Name
             </label>
             <input
               required
               onBlur={handleName}
               type="text"
-              class="form-control"
+              className="form-control"
               name="name"
               aria-describedby="emailHelp"
             />
           </div>
-          <div class="mb-3">
-            <label for="exampleInputEmail1" class="form-label">
+          <div className="mb-3">
+            <label htmlFor="exampleInputEmail1" className="form-label">
               Email address
             </label>
             <input
               onBlur={handleEmail}
               type="email"
-              class="form-control"
+              className="form-control"
               name="email"
               aria-describedby="emailHelp"
               required
             />
           </div>
-          <div class="mb-3">
-            <label for="exampleInputPassword1" class="form-label">
+          <div className="mb-3">
+            <label htmlFor="exampleInputPassword1" className="form-label">
               Password
             </label>
             <input
             onBlur={handlePassword}
               type="password"
-              class="form-control"
+              className="form-control"
               required
             />
           </div>
-          <div class="mb-1">
-            <label for="exampleInputPassword1" class="form-label">
+          <div className="mb-1">
+            <label htmlFor="exampleInputPassword1" className="form-label">
              Confirm Password
             </label>
             <input
               onBlur={handleConfirmPassword}
               type="password"
-              class="form-control"
+              className="form-control"
               required
             />
           </div>
           <p className='text-danger mb-3'>{error1}</p>
           <p className='text-danger mb-3'>{error?.message}</p>
-          <div class="mb-3 form-check">
-            <input onClick={() => setAgree(!agree)} type="checkbox" class="form-check-input" />
-            <label className={agree ? 'text-success' : 'text-danger'} class="form-check-label" for="exampleCheck1">
+          <div className="mb-3 form-check">
+            <input onClick={() => setAgree(!agree)} type="checkbox" className="form-check-input" />
+            <label className={agree ? 'text-success' : 'text-danger'} htmlFor="exampleCheck1">
               Accept out term and privacy?
             </label>
           </div>
