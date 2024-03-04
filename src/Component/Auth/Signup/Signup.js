@@ -51,7 +51,7 @@ const Signup = () => {
     }
 
     //post name and email on database
-      const url = 'http://localhost:5000/signup';
+      const url = 'https://unity-network-server.onrender.com/signup';
       fetch(url, {
         method: "POST",
         headers: {

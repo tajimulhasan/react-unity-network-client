@@ -5,7 +5,7 @@ const AddEvent = () => {
     const name = e.target.name.value;
     const picture = e.target.picture.value;
     const data = {name, picture}
-    const url = 'http://localhost:5000/allevents';
+    const url = 'https://unity-network-server.onrender.com/allevents';
     fetch(url, {
       method: "POST",
       headers: {

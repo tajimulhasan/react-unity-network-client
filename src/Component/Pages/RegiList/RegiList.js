@@ -3,13 +3,13 @@ import "./RegiList.css";
 const RegiList = () => {
   const [items, setItems] = useState([]);
   useEffect(() => {
-    const url = "http://localhost:5000/admin/regilist";
+    const url = "https://unity-network-server.onrender.com/admin/regilist";
     fetch(url)
       .then((res) => res.json())
       .then((data) => setItems(data));
   }, []);
  const handleDeleteRegi = id =>{
-    const url = `http://localhost:5000/admin/regilist/${id}`;
+    const url = `https://unity-network-server.onrender.com/admin/regilist/${id}`;
     fetch(url, {
         method: 'DELETE',
     })

@@ -1,0 +1,17 @@
+{
+  "files": {
+    "main.css": "/static/css/main.e42bb3e8.css",
+    "main.js": "/static/js/main.2e9aab2c.js",
+    "static/js/592.60f0e467.chunk.js": "/static/js/592.60f0e467.chunk.js",
+    "static/media/Non-Profit-Word-Cloud.jpg": "/static/media/Non-Profit-Word-Cloud.126e282e631383596120.jpg",
+    "static/media/donation.png": "/static/media/donation.901443295e7eb1ceb4e9.png",
+    "index.html": "/index.html",
+    "main.e42bb3e8.css.map": "/static/css/main.e42bb3e8.css.map",
+    "main.2e9aab2c.js.map": "/static/js/main.2e9aab2c.js.map",
+    "592.60f0e467.chunk.js.map": "/static/js/592.60f0e467.chunk.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.e42bb3e8.css",
+    "static/js/main.2e9aab2c.js"
+  ]
+}

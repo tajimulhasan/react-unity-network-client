@@ -4,7 +4,7 @@ import './AllEvents.css';
 const AllEvents = () => {
     const [allEvents, setAllEvents] = useState([]);
     useEffect(() => {
-          fetch('http://localhost:5000/allevents')
+          fetch('https://unity-network-server.onrender.com/allevents')
           .then(res => res.json())
           .then(data => setAllEvents(data))
     }, []);
