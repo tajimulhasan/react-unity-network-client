@@ -5,3 +5,8 @@ gap: 33px;
 width: max-content;
 margin: 0px auto;
 }
+@media only screen and (max-width: 576px){
+    .allEvents{
+        grid-template-columns: repeat(2, 1fr);
+    }
+}

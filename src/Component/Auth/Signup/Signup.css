@@ -14,3 +14,8 @@
     background-color: #ff5b00;
     border: none;
 }
+@media only screen and (max-width: 576px){
+    .form-container{
+        width: 75%;
+    }
+}

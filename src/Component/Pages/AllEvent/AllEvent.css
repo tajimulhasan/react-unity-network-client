@@ -4,7 +4,7 @@
  justify-content: center;
  align-items: center;
  text-align: center;
- background-color: #fff6f1;
+ /* background-color: #FF5B00; */
  padding: 12px;
  box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
  border-radius: 6px;
@@ -19,4 +19,28 @@
 .element-div p{
     font-size: 22px;
     margin: 5px 0px;
+}
+@media only screen and (max-width: 576px){
+    .element-div{
+        width: max-content;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        text-align: center;
+        /* background-color: #FF5B00; */
+        padding: 12px;
+        box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
+        border-radius: 6px;
+        -webkit-border-radius: 6px;
+        -moz-border-radius: 6px;
+        -ms-border-radius: 6px;
+        -o-border-radius: 6px;
+       }
+       .element-div img{
+           width: 140px;
+       }
+       .element-div p{
+           font-size: 22px;
+           margin: 5px 0px;
+       }   
 }
